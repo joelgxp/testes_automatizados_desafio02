@@ -3,16 +3,22 @@ package service;
 import model.Funcionario;
 
 public class SalarioBonificacao {
+    double boni;
 
-    private double soma;
-
-    public void salarioBoni(Funcionario f) {
-        double boni = f.getBonificacao();
-        this.soma = this.soma + boni;
+    public SalarioBonificacao(double boni) {
+        this.boni = boni;
     }
 
-    public double getSoma() {
-        return soma;
-    }
+//    public double salarioBoni(Funcionario f) {
+//        boni = f.getBonificacao() + f.getSalario();
+//        return boni;
+//
+//    }
 
+    @Override
+    public String toString() {
+        return "SalarioBonificacao{" +
+                "boni=" + boni +
+                '}';
+    }
 }

@@ -1,15 +1,25 @@
 package model;
 
+import service.SalarioBonificacao;
+
 public abstract class Funcionario {
     private String nome;
     private String cpf;
-    private double salarioBonificado;
     private double salario;
-    private double bonificacao;
+    private int senha;
 
-    public Funcionario(String nome, String cpf) {
+
+    public Funcionario(String nome, String cpf, double salario, int senha) {
         this.nome = nome;
         this.cpf = cpf;
+        this.salario = salario;
+        this.senha = senha;
+    }
+
+    public Funcionario(String nome, String cpf, double salario) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.salario = salario;
     }
 
     public String getNome() {
@@ -32,38 +42,8 @@ public abstract class Funcionario {
         return salario;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public int getSenha() {
+        return senha;
     }
 
-    public double getBonificacao() {
-        return bonificacao;
-    }
-
-    public void setBonificacao(double bonificacao) {
-        this.bonificacao = bonificacao;
-    }
-
-    public boolean autentica(int senha) {
-        return false;
-    }
-
-    public double getSalarioBonificado() {
-
-        return salarioBonificado = getSalario() + getBonificacao();
-
-    }
-
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", salarioBonificado=" + salarioBonificado +
-                ", salario=" + salario +
-                ", bonificacao=" + bonificacao +
-                '}';
-    }
 }
-
-
