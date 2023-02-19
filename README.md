@@ -1,4 +1,4 @@
-# Desafio Teste Automatizados
+# Desafio Testes Automatizados
 
 ## 📋 Entendendo o projeto
 Nesse desafio do curso da Santander Coders - Automação de Testes ministrado pelo Ada Tech, foi preciso desenvolver um projeto de escopo aberto usando a ferramenta de testes Junit5.
