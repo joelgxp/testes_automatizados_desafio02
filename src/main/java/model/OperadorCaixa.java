@@ -12,4 +12,9 @@ public class OperadorCaixa extends Funcionario{
     public int getSenha() {
         return senha;
     }
+
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
 }

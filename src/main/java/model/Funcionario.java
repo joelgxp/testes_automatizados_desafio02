@@ -7,6 +7,9 @@ public abstract class Funcionario {
     private String cpf;
     private double salario;
     private int senha;
+    private double bonificacao;
+    private String tipoAcesso;
+
 
 
     public Funcionario(String nome, String cpf, double salario, int senha) {
@@ -44,6 +47,22 @@ public abstract class Funcionario {
 
     public int getSenha() {
         return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+
+    public double getBonificacao() {
+        return bonificacao;
+    }
+
+    public void setBonificacao(double bonificacao) {
+        this.bonificacao = bonificacao;
+    }
+
+    public String getTipoAcesso() {
+        return tipoAcesso;
     }
 
 }
