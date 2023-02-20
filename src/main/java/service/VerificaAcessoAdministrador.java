@@ -10,7 +10,8 @@ public class VerificaAcessoAdministrador {
     public boolean autenticaMudarSenha (Funcionario funcionario) {
         if (funcionario.getTipoAcesso() == true) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }

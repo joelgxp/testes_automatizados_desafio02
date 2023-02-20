@@ -14,6 +14,7 @@ public class ControleDeAcesso {
     public void setSenhaAcesso(int senhaAcesso) {
         this.senhaAcesso = senhaAcesso;
     }
+
     public boolean verificaAcesso(Funcionario funcionario) throws Exception {
         if (funcionario.getSenha() == 0) {
             throw new Exception("Usuario sem acesso ao sistema");
@@ -23,18 +24,14 @@ public class ControleDeAcesso {
         } else {
             return false;
         }
-
     }
 
     public void alterarSenha(Funcionario funcionario, int senhaNova) throws Exception {
 
-        if(verificaAcessoAdministrador.autenticaMudarSenha(funcionario) == true) {
+        if(verificaAcessoAdministrador.autenticaMudarSenha(funcionario)) {
             funcionario.setSenha(senhaNova);
         } else {
             throw new Exception("Usuario sem permissao para alterar senha");
         }
-
-
     }
-
 }

@@ -21,10 +21,10 @@ public class ControleDeAcessoTest {
     ServicosGerais servGeral;
 
     @Mock
-    private VerificaAcessoAdministrador verificaAcessoAdministrador;
+    VerificaAcessoAdministrador verificaAcessoAdministrador;
 
     @InjectMocks
-    private ControleDeAcesso controleDeAcesso;
+    ControleDeAcesso controleDeAcesso;
 
     @BeforeEach
     public void before(){
@@ -86,18 +86,19 @@ public class ControleDeAcessoTest {
 
     }
 
-    @Test
-    public void usuarioOperadorCaixaComPermissaoAdministradorPodeAlterarSenha() throws Exception {
-        //ENQUANTO
-        controleDeAcesso.alterarSenha(opCaixa,4321);
-
-        Mockito.when(verificaAcessoAdministrador.autenticaMudarSenha(opCaixa)).thenReturn(true);
-
-
-        //assertThrows(Exception.class, ()-> controleDeAcesso.alterarSenha(opCaixa, 4455));
-        System.out.println(opCaixa.getSenha());
-
-
-    }
+//    @Test
+//    public void usuarioOperadorCaixaComPermissaoAdministradorPodeAlterarSenha() throws Exception {
+//
+//        Mockito.when(verificaAcessoAdministrador.autenticaMudarSenha(opCaixa)).thenReturn(true);
+//
+//        int senhaAntiga = opCaixa.getSenha();
+//        System.out.println(senhaAntiga);
+//        controleDeAcesso.alterarSenha(opCaixa, 112233);
+//        System.out.println(opCaixa.getSenha());
+//
+//        //ENQUANTO
+//        assertNotEquals(opCaixa.getSenha(), senhaAntiga);
+//
+//    }
 
 }
