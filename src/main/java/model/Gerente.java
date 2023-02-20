@@ -3,7 +3,7 @@ package model;
 public class Gerente extends Funcionario{
 
     private int senha = 123456;
-    private String tipoAcesso = "admin";
+    private boolean tipoAcesso = true;
 
     public Gerente(String nome, String cpf, double salario) {
         super(nome, cpf, salario);
@@ -19,9 +19,8 @@ public class Gerente extends Funcionario{
         this.senha = senha;
     }
 
-    public String getTipoAcesso(){
+    public boolean getTipoAcesso(){
         return tipoAcesso;
     }
-
 
 }

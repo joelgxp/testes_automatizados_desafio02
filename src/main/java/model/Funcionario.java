@@ -7,38 +7,13 @@ public abstract class Funcionario {
     private String cpf;
     private double salario;
     private int senha;
-    private double bonificacao;
-    private String tipoAcesso;
-
-
-
-    public Funcionario(String nome, String cpf, double salario, int senha) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.salario = salario;
-        this.senha = senha;
-    }
+    private Double bonificacao;
+    private boolean tipoAcesso;
 
     public Funcionario(String nome, String cpf, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.salario = salario;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public double getSalario() {
@@ -53,7 +28,7 @@ public abstract class Funcionario {
         this.senha = senha;
     }
 
-    public double getBonificacao() {
+    public Double getBonificacao() {
         return bonificacao;
     }
 
@@ -61,7 +36,7 @@ public abstract class Funcionario {
         this.bonificacao = bonificacao;
     }
 
-    public String getTipoAcesso() {
+    public boolean getTipoAcesso() {
         return tipoAcesso;
     }
 
